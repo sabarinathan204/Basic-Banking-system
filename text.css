@@ -1,0 +1,250 @@
+:root{
+    --main-color:#4C84FF;
+    --primary-bg-color:#fff;
+    --secondary-bg-color:#eee;
+    --primary-text-color:#222;
+    --secondary-text-color:#666;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none; border:none;
+    text-decoration: none;
+    transition:all .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+*::selection{
+    background-color: var(--main-color);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--secondary-bg-color);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+body{
+    background: yellowgreen;
+}
+
+body.dark-theme{
+    --primary-bg-color:#252C48;
+    --secondary-bg-color:#171C32;
+    --primary-text-color:#fff;
+    --secondary-text-color:#eee;
+}
+
+section{
+    min-height: 90vh;
+    padding:1rem;
+    padding:0 8%;
+}
+
+.btn{
+    display: inline-block;
+    padding:.9rem 3.5rem;
+    font-size: 2rem;
+    background:none;
+    color:#fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin-top: 1rem;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    border:.2rem solid var(--main-color);
+}
+
+
+
+.btn:hover{
+    color: black;
+    background-color: red;
+    transition: .2s linear;
+}
+
+.heading{
+    font-size: 5rem;
+    color:var(--primary-text-color);
+    text-align: center;
+    padding:1rem;
+    text-transform: uppercase;
+    margin-top: 21px;
+}
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+#menu{
+    font-size: 2rem;
+    background:var(--main-color);
+    color:#fff;
+    border-radius: 5rem;
+    height:5rem;
+    width:5rem;
+    text-align: center;
+    line-height: 5rem;
+    position: fixed;
+    top: 2rem; right:2rem;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#menu.fa-times{
+    transform:rotate(-180deg);
+}
+
+.navbar{
+    position: fixed;
+    top:2.4rem; right:2.5rem;
+    padding:1.1rem 2rem;
+    padding-right: 4rem;
+    z-index: 999;
+    border:.2rem solid red;
+    border-radius: 1rem;
+    background:skyblue;
+    opacity: 0;
+    transform-origin: top right;
+    transform: scale(0);
+}
+
+.navbar.nav-toggle{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.navbar a{
+    display: block;
+    font-size: 2rem;
+    padding:1rem;
+    padding-right: 7rem;
+    color:var(--primary-text-color);
+}
+
+.navbar a:hover{
+    color:var(--main-color);
+    transform: translateX(1rem);
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home .image{
+    flex:1 1 40rem;
+    padding:1rem;
+    text-align: center;
+}
+
+.home .image img{
+    height:50rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+    border-top: 3rem solid var(--primary-bg-color);
+    border-right: 3rem solid var(--primary-bg-color);
+    border-bottom: 3rem solid var(--main-color);
+    border-left: 3rem solid var(--main-color);
+    border-radius: .5rem;
+}
+
+.home .content{
+    flex:1 1 40rem;
+    padding:1rem;
+}
+
+.home .content .hello{
+    display: inline-block;
+    padding:1rem 0;
+    font-size: 2.6rem;
+    color:black;
+}
+
+.home .content h3{
+    color:var(--primary-text-color);
+    font-size: 5rem;
+}
+
+.home .content h3 span{
+    color:red;
+}
+
+.home .content p{
+    padding:1rem 0;
+    color:black;
+    font-size: 2rem;
+}
+
+.about .row{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .box{
+    flex:1 1 40rem;
+    background-color: var(--primary-bg-color);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding:.5rem 1.5rem;
+    margin:1.5rem;
+}
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    section{
+        padding:1rem;
+        padding: 8 6%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .home .image img{
+        height: auto;
+        width: 100%;
+    }
+
+}
+
+@media (max-width:400px){
+
+    html{
+        font-size: 50%;
+    }
+   
+}

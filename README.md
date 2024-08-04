@@ -1,2 +1,1 @@
-# Basic-Banking-system
-The speak foundation intenship project
+# BasicBankigSystem.github.io
